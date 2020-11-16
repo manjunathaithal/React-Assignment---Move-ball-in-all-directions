@@ -21,10 +21,10 @@ const App = () => {
   };
   const renderChoice = () => {
     if (renderBall) {
-      return <div className="ball" style={ballPosition} className="ball"></div>;
+      return <div className="ball" style={ballPosition}></div>;
     } else {
       return (
-        <button className="start" onClick={ballHandler} className="start">
+        <button onClick={ballHandler} className="start">
           Start
         </button>
       );
