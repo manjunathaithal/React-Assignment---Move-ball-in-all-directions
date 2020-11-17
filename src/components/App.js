@@ -5,7 +5,6 @@ const App = () => {
   const [renderBall, setRenderBall] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-
   const [ballPosition, setBallPosition] = useState({
     left: "0px",
     top: "0px",
@@ -32,28 +31,32 @@ const App = () => {
   };
   const moveBall = (event) => {
     if (event.key === "ArrowRight") {
-      setX(x + 5);
+      let tempArrowRight = x + 5;
+      setX(tempArrowRight);
       setBallPosition({
-        left: x,
+        left: tempArrowRight,
         top: y,
       });
     } else if (event.key === "ArrowLeft") {
-      setX(x - 5);
+      let tempArrowLeft = x - 5;
+      setX(tempArrowLeft);
       setBallPosition({
-        left: x,
+        left: tempArrowLeft,
         top: y,
       });
     } else if (event.key === "ArrowDown") {
-      setY(y + 5);
+      let tempArrowDown = y + 5;
+      setY(tempArrowDown);
       setBallPosition({
         left: x,
-        top: y,
+        top: tempArrowDown,
       });
     } else if (event.key === "ArrowUp") {
-      setY(y - 5);
+      let tempArrowUp = y - 5;
+      setY(tempArrowUp);
       setBallPosition({
         left: x,
-        top: y,
+        top: tempArrowUp,
       });
     }
   };
